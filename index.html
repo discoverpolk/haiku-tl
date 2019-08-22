@@ -45,7 +45,7 @@
 <img id="mobilePic" class="back">
 </div>
 <div id="mobileHaikuContainer">
-<i class='fa fa-quote-left fa-2x' style='float:left;padding-top:0;padding-left:15px;padding-right:15px;height:80px;'></i>
+<i id ="bigquote" class='fa fa-quote-left fa-2x'></i>
 <div id="mobileHaiku"></div>
 </div>
 </div>
@@ -221,6 +221,7 @@ document.getElementById("mobileHaiku").innerHTML = haikuArray[0];
 mobileHaikuContainer.style.background=colorArray[0];
 
 
+
 var next = document.createElement("div");
 		var prev = document.createElement("div");
 		prev.className = "previous";
@@ -240,7 +241,7 @@ function scrollMob(dir){
 
 	var place;
 	const picspace = document.getElementById("mobilePic");
-	
+	mobileContainer.style.background = colorArray[place];
 	if (scroll == haikuArray.length-1 && dir == 1) {
 		place = 0; 
 	}
@@ -258,6 +259,7 @@ function scrollMob(dir){
 
 	mobileHaiku.innerHTML = haikuArray[place];
 	mobileHaikuContainer.style.background = colorArray[place];
+
 	moveMap(place);
 	
 	scroll = place;
@@ -294,6 +296,7 @@ function moveMap(id) {
 </html>
     
     
+
 
     
 
